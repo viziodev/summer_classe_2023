@@ -1,0 +1,17 @@
+{
+  "name": "mac/gestion-formation",
+  "autoload": {
+    "psr-4": {
+      "App\\": "app/",
+      "App\\Models\\": "app/Model/",
+      "Config\\": "config/"
+    }
+  },
+  "authors": [
+    {
+      "name": "viziodev",
+      "email": "viziodev03@gmail.com"
+    }
+  ],
+  "require": {}
+}
