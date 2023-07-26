@@ -1,10 +1,13 @@
 <?php
 
+use App\Models\Tag;
+use Config\DataBase;
 use App\Models\Categorie;
 use App\Models\Formation;
 
-
 require_once "./../vendor/autoload.php";
+
+require_once "./../boostrap/bootstrap.php";
 
 /**
  * Categorie Classe 
@@ -22,20 +25,27 @@ require_once "./../vendor/autoload.php";
  */
 
  //Ajouter une categorie
+//$cat =new Categorie;
+ //dd(Categorie::$tableName);
 
-Categorie::create([
-    'libelle' => 'PHP'
-]);
-//insert into categorie('libelle') values("PHP");
-$cat =new Categorie;
-$cat->libelle="Dev Imfo";
-$cat->save();
-//insert into formation('libelle',"montant") values("PHP",1000);
-Formation::create([
-    "libelle" =>"PHP POO",
-    "montant"=>1000
-])
-$form =new Formation;
-$form->save();
+ //insert into categorie (libelle)  values(:libelle)
+
+
+
+  //insert into formation (libelle,categorie_id)  values(:libelle,:categorie_id)
+/*  dd(Formation::create([
+       "libelle" =>'PHP Procedural',
+       "categorie_id" =>1
+ ])); */
+
+ /* dd(Formation::delete(1)); */
+
+ dd(Formation::update([
+       "id" =>2,
+       "libelle" =>'PHP POO 2',
+       "categorie_id" =>1
+])); 
+ //update formation set libelle=:libelle ,categorie_id=:categorie_id where id=:id
+
  
  
