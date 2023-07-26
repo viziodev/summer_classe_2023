@@ -3,7 +3,6 @@ namespace Config;
 abstract class Model {
       public abstract function save();//insert ou update
       public abstract function find();//insert ou update
-  
       public static function create(array $data) {
         
       } 
