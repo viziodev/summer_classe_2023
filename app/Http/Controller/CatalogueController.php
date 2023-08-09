@@ -1,19 +1,19 @@
 <?php 
 namespace App\Controllers;
 
-use Config\Controller;
 use App\Models\Categorie;
+use Config\Controller;
 
-class CategorieController extends Controller{
+class CatalogueController extends Controller{
 
      
     public function __construct()
     {
          
     }
-
     public function index(){
-       dd("Categorie");
+      //$this->renderView("catalogue/index");
+      $this->renderJson(Categorie::findAll());
     }
     
 }

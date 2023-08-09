@@ -12,6 +12,10 @@ use Config\Model;
      public  static function  tableName(){
         return 'tag';
       }
+
+      public function formations(){
+        
+      }
      
      //_construct();
 }

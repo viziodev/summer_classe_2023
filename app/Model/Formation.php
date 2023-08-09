@@ -7,6 +7,16 @@ class Formation extends Model{
       public int  $id; 
       public string $libelle;
       public int  $categorie_id; 
+      public string $photo;
+      public int $cout;
+      public int $duree;
+      public int $note;
+      public bool $publier ;
+      public bool $promo ;
+      public int $remise ;
+      public string $dateDebutPromo ;
+      public string $dateFinPromo;
+
       
       public  static function  tableName(){
         return 'formation';
@@ -15,6 +25,14 @@ class Formation extends Model{
       //ManyToOne
       public function categorie(){
           return Categorie::findOrFail($this->categorie_id);
+      }
+
+      public function tags(){
+       
+      }
+
+      public function videos(){
+       
       }
 
        public static  function findByCategorie(int $categorie){
